@@ -1,0 +1,18 @@
+#include "centaur.h"
+
+int centaur::time(int s) {
+	double tm = 0; // время прохождения без отдыха
+	int n = 0;// количество остановок на отьдых
+	double tr = 0; // суммарное время отдыха
+	tm = s / v;
+	n = tm / t;
+	(n != 1 ? (n - 1) : 0);
+	for (int i = 1; i <= n; ++i) {
+		tr += dt;
+	};
+	res = static_cast<int> (tr + tm);
+	return 0;
+}
+int centaur::get_res() {
+	return res;
+}
